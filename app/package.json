@@ -12,10 +12,12 @@
     "format": "prettier --write '**/*.{astro,ts,tsx,js,mjs,jsx}' && npm run lint:fix && prettier --write '**/*.{astro,ts,tsx,js,mjs,jsx}'",
     "test": "vitest run --coverage.enabled true",
     "e2e": "npx playwright test",
-    "report": "npx playwright show-report"
+    "report": "npx playwright show-report",
+    "add": "npx shadcn@latest add"
   },
   "dependencies": {
     "@astrojs/react": "^4.3.1",
+    "@radix-ui/react-slot": "^1.2.3",
     "@tailwindcss/vite": "^4.1.13",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",

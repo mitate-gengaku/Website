@@ -1,6 +1,6 @@
 import type React from "react";
 
-import { cn } from "@/utils/cn"
+import { cn } from "@/utils/cn";
 
 export const Section = ({
   className,
