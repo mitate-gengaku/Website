@@ -11,6 +11,7 @@
     "lint:fix": "eslint . --ext .js,.mjs,.ts,.tsx --fix",
     "format": "prettier --write '**/*.{astro,ts,tsx,js,mjs,jsx}' && npm run lint:fix && prettier --write '**/*.{astro,ts,tsx,js,mjs,jsx}'",
     "test": "vitest run --coverage.enabled true",
+    "test:w": "vitest run --watch --coverage.enabled true",
     "e2e": "npx playwright test",
     "report": "npx playwright show-report",
     "add": "npx shadcn@latest add"

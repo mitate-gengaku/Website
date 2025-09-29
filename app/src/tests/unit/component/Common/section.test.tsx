@@ -9,7 +9,7 @@ describe("Sectionコンポーネント", () => {
 
   describe("propsが何もない状態", () => {
     beforeEach(() => {
-      rendered = render(<Section data-testid="section" />);
+      rendered = render(<Section />);
     });
 
     test("コンポーネントが正しくレンダリングされること", () => {
@@ -25,9 +25,7 @@ describe("Sectionコンポーネント", () => {
 
   describe("classNameを渡した状態", () => {
     beforeEach(() => {
-      rendered = render(
-        <Section data-testid="section" className="bg-red-500" />,
-      );
+      rendered = render(<Section className="bg-red-500" />);
     });
 
     test("デフォルトのclassNameとpropsのclassNameが正しく結合されること", () => {
@@ -40,7 +38,7 @@ describe("Sectionコンポーネント", () => {
   describe("子要素がある状態", () => {
     beforeEach(() => {
       rendered = render(
-        <Section data-testid="section" className="bg-red-500">
+        <Section className="bg-red-500">
           <h1 data-testid="heading-1">Hello World</h1>
         </Section>,
       );

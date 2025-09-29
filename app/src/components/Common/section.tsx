@@ -6,5 +6,9 @@ export const Section = ({
   className,
   ...props
 }: React.ComponentProps<"section">) => (
-  <section className={cn("px-4 py-24 lg:px-8", className)} {...props} />
+  <section
+    className={cn("px-4 py-24 lg:px-8", className)}
+    data-testid="section"
+    {...props}
+  />
 );

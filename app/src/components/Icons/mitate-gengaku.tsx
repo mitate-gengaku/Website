@@ -8,7 +8,7 @@ type IconProps = {
 } & React.ComponentProps<"div">;
 
 export const MitateGengakuAscii = ({ charClassName, ...props }: IconProps) => (
-  <div {...props}>
+  <div {...props} data-testid="mitate-gengaku">
     {TITLE.map((chars, i) => (
       <div
         className="flex items-center justify-center gap-0 lg:justify-start"

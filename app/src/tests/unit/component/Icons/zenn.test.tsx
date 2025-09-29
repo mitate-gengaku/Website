@@ -9,7 +9,7 @@ describe("ZennIconコンポーネント", () => {
 
   describe("propsが何もない状態", () => {
     beforeEach(() => {
-      rendered = render(<ZennIcon data-testid="zenn" />);
+      rendered = render(<ZennIcon />);
     });
 
     test("コンポーネントが正しくレンダリングされること", () => {
@@ -23,9 +23,7 @@ describe("ZennIconコンポーネント", () => {
 
   describe("propsを渡した状態", () => {
     beforeEach(() => {
-      rendered = render(
-        <ZennIcon fill="#3EA8FF" className="size-4" data-testid="zenn" />,
-      );
+      rendered = render(<ZennIcon fill="#3EA8FF" className="size-4" />);
     });
 
     test("classNameが正しく渡されること", () => {

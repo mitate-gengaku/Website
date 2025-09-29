@@ -27,10 +27,6 @@ export default defineConfig({
   vite: {
     plugins: [
       tailwindcss(),
-      removeAttr({
-        extensions: ['tsx', 'jsx', 'astro'],
-        attributes: ['data-testid']
-      })
     ],
     resolve: {
       alias: {

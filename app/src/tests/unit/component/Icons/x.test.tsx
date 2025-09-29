@@ -9,7 +9,7 @@ describe("XIconコンポーネント", () => {
 
   describe("propsが何もない状態", () => {
     beforeEach(() => {
-      rendered = render(<XIcon data-testid="x" />);
+      rendered = render(<XIcon />);
     });
 
     test("コンポーネントが正しくレンダリングされること", () => {
@@ -23,9 +23,7 @@ describe("XIconコンポーネント", () => {
 
   describe("propsを渡した状態", () => {
     beforeEach(() => {
-      rendered = render(
-        <XIcon fill="#000" className="size-4" data-testid="x" />,
-      );
+      rendered = render(<XIcon fill="#000" className="size-4" />);
     });
 
     test("classNameが正しく渡されること", () => {

@@ -1,7 +1,12 @@
 import { cleanup, render, type RenderResult } from "@testing-library/react";
 
-import { Section } from "@/components/Common/header-title";
 import { Title } from "@/components/Header/title";
+
+vi.mock("@/components/Icons/mitate-gengaku", () => ({
+  MitateGengakuAscii: () => (
+    <span data-testid="mitate-gengaku">Mitate Gengaku</span>
+  ),
+}));
 
 describe("Title(Header)コンポーネント", () => {
   let rendered: RenderResult;
@@ -9,16 +14,19 @@ describe("Title(Header)コンポーネント", () => {
   afterEach(cleanup);
 
   beforeEach(() => {
-    rendered = render(<Title data-testid="header-title" />);
+    rendered = render(<Title />);
   });
 
   test("コンポーネントが正しくレンダリングされること", () => {
     expect(rendered.getByTestId("header-title")).toBeInTheDocument();
+    expect(rendered.getByTestId("header-title").tagName).toEqual("SPAN");
   });
 
-  test("デフォルトのclassNameが適用されること", () => {
-    expect(rendered.getByTestId("header-title").className).toEqual(
-      "px-4 py-24 lg:px-8",
-    );
+  test("aタグがコンポーネント内に存在すること", () => {
+    expect(rendered.container.querySelector("a")).toBeInTheDocument();
+  });
+
+  test("MitateGengakuAsciiコンポーネントが存在すること", () => {
+    expect(rendered.getByTestId("mitate-gengaku")).toBeInTheDocument();
   });
 });

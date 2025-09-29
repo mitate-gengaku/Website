@@ -8,7 +8,7 @@ describe("MitateGengakuAscii コンポーネント", () => {
   afterEach(cleanup);
 
   beforeEach(() => {
-    rendered = render(<MitateGengakuAscii data-testid="mitate-gengaku" />);
+    rendered = render(<MitateGengakuAscii />);
   });
 
   test("コンポーネントが正しくレンダリングされること", () => {
@@ -27,3 +27,4 @@ describe("MitateGengakuAscii コンポーネント", () => {
     }
   });
 });
+

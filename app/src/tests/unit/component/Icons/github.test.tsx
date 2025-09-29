@@ -9,7 +9,7 @@ describe("GithubIconコンポーネント", () => {
 
   describe("propsが何もない状態", () => {
     beforeEach(() => {
-      rendered = render(<GithubIcon data-testid="github" />);
+      rendered = render(<GithubIcon />);
     });
 
     test("コンポーネントが正しくレンダリングされること", () => {
@@ -23,9 +23,7 @@ describe("GithubIconコンポーネント", () => {
 
   describe("propsを渡した状態", () => {
     beforeEach(() => {
-      rendered = render(
-        <GithubIcon fill="#181717" className="size-4" data-testid="github" />,
-      );
+      rendered = render(<GithubIcon fill="#181717" className="size-4" />);
     });
 
     test("classNameが正しく渡されること", () => {
