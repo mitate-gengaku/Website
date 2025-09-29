@@ -5,7 +5,9 @@ import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import relativeLinks from "astro-relative-links";
-// import removeAttr from "remove-attr";
+import removeAttr from "remove-attr";
+
+let isProduction = process.env.NODE_ENV === "production";
 
 // https://astro.build/config
 export default defineConfig({
@@ -27,10 +29,11 @@ export default defineConfig({
   vite: {
     plugins: [
       tailwindcss(),
-      // removeAttr({
-      //   extensions: ["tsx", "jsx", "astro"],
-      //   attributes: ["data-testid"],
-      // }),
+      isProduction && removeAttr({
+        extensions: ["tsx", "jsx", "astro"],
+        attributes: ["data-testid"],
+      }),
+      
     ],
     resolve: {
       alias: {
