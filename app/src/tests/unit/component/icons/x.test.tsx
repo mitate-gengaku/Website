@@ -2,7 +2,7 @@ import { cleanup, render, type RenderResult } from "@testing-library/react";
 
 import { XIcon } from "@/components/Icons/x";
 
-describe("X Iconコンポーネント", () => {
+describe("XIconコンポーネント", () => {
   let rendered: RenderResult;
 
   afterEach(cleanup);

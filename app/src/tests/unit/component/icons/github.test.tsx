@@ -2,7 +2,7 @@ import { cleanup, render, type RenderResult } from "@testing-library/react";
 
 import { GithubIcon } from "@/components/Icons/github";
 
-describe("Github Iconコンポーネント", () => {
+describe("GithubIconコンポーネント", () => {
   let rendered: RenderResult;
 
   afterEach(cleanup);

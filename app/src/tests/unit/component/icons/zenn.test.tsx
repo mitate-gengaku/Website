@@ -2,7 +2,7 @@ import { cleanup, render, type RenderResult } from "@testing-library/react";
 
 import { ZennIcon } from "@/components/Icons/zenn";
 
-describe("Zenn Iconコンポーネント", () => {
+describe("ZennIconコンポーネント", () => {
   let rendered: RenderResult;
 
   afterEach(cleanup);

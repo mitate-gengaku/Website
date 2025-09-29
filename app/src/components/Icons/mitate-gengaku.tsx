@@ -22,7 +22,7 @@ export const MitateGengakuAscii = ({ charClassName, ...props }: IconProps) => (
               className={cn("block h-4 w-2 [zoom:0.2]", charClassName)}
               key={`${char}-${i}`}
             >
-              {char ? char : " "}
+              {char === " " ? " " : char}
             </span>
           ))}
       </div>
