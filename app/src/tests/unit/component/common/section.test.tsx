@@ -23,7 +23,7 @@ describe("Sectionコンポーネント", () => {
     });
   });
 
-  describe("classNameを渡す", () => {
+  describe("classNameを渡した状態", () => {
     beforeEach(() => {
       rendered = render(
         <Section data-testid="section" className="bg-red-500" />,
@@ -37,7 +37,7 @@ describe("Sectionコンポーネント", () => {
     });
   });
 
-  describe("classNameを渡す", () => {
+  describe("子要素がある状態", () => {
     beforeEach(() => {
       rendered = render(
         <Section data-testid="section" className="bg-red-500">
