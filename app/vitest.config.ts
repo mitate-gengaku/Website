@@ -7,7 +7,7 @@ export default getViteConfig(
       css: true,
       coverage: {
         include: ["src"],
-        exclude: ["src/**/types"],
+        exclude: ["src/**/types", "src/tests"],
         reporter: ["html", "clover", "text", "json-summary", "json"],
       },
       environment: "happy-dom",
