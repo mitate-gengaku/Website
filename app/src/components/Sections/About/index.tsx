@@ -5,7 +5,7 @@ import { Description } from "@/components/Sections/About/description";
 import { ProfileAscii } from "@/components/Sections/About/profile-ascii";
 
 export const About = () => (
-  <Section id="about">
+  <Section id="about" data-testid="about">
     <div className="mx-auto flex flex-col lg:flex-row lg:items-center gap-6 max-w-5xl">
       <div className="space-y-6 text-center lg:text-left">
         <Title title="Hello. I am 【御楯玄嶽】" />
