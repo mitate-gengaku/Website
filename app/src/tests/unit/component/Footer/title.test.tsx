@@ -1,6 +1,6 @@
 import { cleanup, render, type RenderResult } from "@testing-library/react";
 
-import { Title } from "@/components/Header/title";
+import { Title } from "@/components/Footer/title";
 
 vi.mock("@/components/Icons/mitate-gengaku", () => ({
   MitateGengakuAscii: () => (
@@ -8,7 +8,7 @@ vi.mock("@/components/Icons/mitate-gengaku", () => ({
   ),
 }));
 
-describe("Title(Header)コンポーネント", () => {
+describe("Title(Footer)コンポーネント", () => {
   let rendered: RenderResult;
 
   afterEach(cleanup);
@@ -18,12 +18,8 @@ describe("Title(Header)コンポーネント", () => {
   });
 
   test("コンポーネントが正しくレンダリングされること", () => {
-    expect(rendered.getByTestId("header-title")).toBeInTheDocument();
-    expect(rendered.getByTestId("header-title").tagName).toEqual("DIV");
-  });
-
-  test("aタグがコンポーネント内に存在すること", () => {
-    expect(rendered.container.querySelector("a")).toBeInTheDocument();
+    expect(rendered.getByTestId("footer-title")).toBeInTheDocument();
+    expect(rendered.getByTestId("footer-title").tagName).toEqual("H3");
   });
 
   test("MitateGengakuAsciiコンポーネントが存在すること", () => {

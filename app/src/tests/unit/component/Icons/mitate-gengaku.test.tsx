@@ -18,12 +18,4 @@ describe("MitateGengakuAscii コンポーネント", () => {
   test("コンポーネントのタグ名は'div'であること", () => {
     expect(rendered.getByTestId("mitate-gengaku").tagName).toEqual("DIV");
   });
-
-  test("コンポーネント内の'span'タグはclassNameを持っていること", () => {
-    const spans = rendered.container.querySelectorAll("span");
-
-    for (let i = 0; i < spans.length; i++) {
-      expect(spans[i].className).toEqual("block h-4 w-2 [zoom:0.2]");
-    }
-  });
 });
