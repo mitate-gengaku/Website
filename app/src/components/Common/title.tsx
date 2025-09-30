@@ -10,6 +10,7 @@ export const Title = ({ title, className, ...props }: Props) => (
       "scroll-m-20 text-4xl font-extrabold tracking-tight",
       className,
     )}
+    data-testid="title"
     {...props}
   >
     {title}

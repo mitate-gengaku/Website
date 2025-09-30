@@ -11,6 +11,7 @@ export const BlogLinkButton = ({ className, children, ...props }: Props) => (
       "border border-neutral-300 bg-[#3EA8FF] hover:bg-[#3EA8FF]/85",
       className,
     )}
+    data-testid="blog-link-button"
     {...props}
     asChild
   >
