@@ -5,12 +5,18 @@ import { cn } from "@/utils/cn";
 
 type Props = React.ComponentProps<typeof Button>;
 
-export const BlogLinkButton = ({ className, children, ...props }: Props) => (
+export const BlogLinkButton = ({
+  className,
+  children,
+  size = "sm",
+  ...props
+}: Props) => (
   <Button
     className={cn(
       "border border-neutral-300 bg-[#3EA8FF] hover:bg-[#3EA8FF]/85",
       className,
     )}
+    size={size}
     data-testid="blog-link-button"
     {...props}
     asChild
