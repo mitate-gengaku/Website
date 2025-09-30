@@ -3,7 +3,7 @@ export const Description = () => (
     <p>I am a junior engineer in the computer infrastructure area.</p>
     <p>
       I became interested in programming in my late teens, and I'm currently
-      playing around with Linux.
+      enjoying around with Linux.
     </p>
   </div>
 );
