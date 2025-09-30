@@ -2,7 +2,7 @@ import { PROFILE_ASCII } from "@/config/profile";
 import { cn } from "@/utils/cn";
 
 export const ProfileAscii = () => (
-  <div className="hidden lg:block">
+  <div className="hidden lg:block" data-testid="profile-ascii">
     {PROFILE_ASCII.map((chars, i) => (
       <div
         className="flex items-center justify-center gap-0 lg:justify-start"
@@ -16,7 +16,7 @@ export const ProfileAscii = () => (
               className={cn("block h-4 w-2 [zoom:0.4]")}
               key={`${char}-${i}`}
             >
-              {char ? char : " "}
+              {char === " " ? " " : char}
             </span>
           ))}
       </div>
