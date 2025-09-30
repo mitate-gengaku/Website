@@ -118,3 +118,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+* {
+  font-family: "Inter";
+  user-select: none;
+  scroll-behavior: smooth;
+}
