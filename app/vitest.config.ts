@@ -13,7 +13,7 @@ export default getViteConfig(
       environment: "happy-dom",
       globals: true,
       include: ["**/*.test.?(c|m)[jt]s?(x)"],
-      setupFiles: ["./src/tests/setup/index.ts"],
+      setupFiles: ["./src/tests/setup/index.tsx"],
     },
   },
   {
