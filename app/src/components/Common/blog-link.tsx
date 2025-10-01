@@ -1,26 +1,28 @@
 import type React from "react";
 
-import { Button } from "@/components/ui/button";
+import { buttonVariants, Button } from "@/components/ui/button";
 import { cn } from "@/utils/cn";
 
-type Props = React.ComponentProps<typeof Button>;
+type Props = React.ComponentProps<"a"> & {
+  size?: React.ComponentProps<typeof Button>["size"];
+};
 
-export const BlogLinkButton = ({
+export const BlogLink = ({
   className,
   children,
   size = "sm",
   ...props
 }: Props) => (
-  <Button
+  <a
     className={cn(
-      "border border-neutral-300 bg-[#3EA8FF] hover:bg-[#3EA8FF]/85",
+      "border border-neutral-300 bg-[#0a0b0c] hover:bg-[#3EA8FF]/85",
+      buttonVariants({ size: size }),
       className,
     )}
-    size={size}
-    data-testid="blog-link-button"
+    data-testid="blog-link"
+    href="https://zenn.dev/mitate_gengaku"
     {...props}
-    asChild
   >
-    <a href="https://zenn.dev/mitate_gengaku">{children}</a>
-  </Button>
+    {children}
+  </a>
 );

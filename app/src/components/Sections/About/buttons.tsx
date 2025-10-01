@@ -1,4 +1,4 @@
-import { BlogLinkButton } from "@/components/Common/blog-link";
+import { BlogLink } from "@/components/Common/blog-link";
 import { Button } from "@/components/ui/button";
 
 export const Buttons = () => (
@@ -6,7 +6,7 @@ export const Buttons = () => (
     className="flex items-center justify-center lg:justify-start gap-4"
     data-testid="buttons"
   >
-    <BlogLinkButton className="px-4">Read Blog</BlogLinkButton>
+    <BlogLink className="px-4">Read Blog</BlogLink>
     <Button
       size={"sm"}
       variant={"outline"}

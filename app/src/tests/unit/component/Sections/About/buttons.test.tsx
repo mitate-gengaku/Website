@@ -1,12 +1,6 @@
 import { cleanup, render, type RenderResult } from "@testing-library/react";
 
-import type { Button } from "@/components/ui/button";
-
 import { Buttons } from "@/components/Sections/About/buttons";
-
-vi.mock("@/components/ui/button", () => ({
-  Button: (props: React.ComponentProps<typeof Button>) => <button {...props} />,
-}));
 
 describe("Buttonsコンポーネント", () => {
   let rendered: RenderResult;

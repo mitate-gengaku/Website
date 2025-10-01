@@ -23,14 +23,22 @@ export const ViewCard = ({
   contentClass,
   footer,
 }: Props) => (
-  <Card className="hover:shadow-lg transition-all rounded-sm">
+  <Card
+    className="hover:shadow-lg transition-all rounded-sm"
+    data-testid="view-card"
+  >
     <CardHeader
       className={cn("border-b border-gray-200", !description && "gap-0")}
+      data-testid="view-card-header"
     >
       <CardTitle className={"flex items-center gap-2"}>{title}</CardTitle>
       {description && <CardDescription>{description}</CardDescription>}
     </CardHeader>
     <CardContent className={contentClass}>{content}</CardContent>
-    {footer && <CardFooter className="pt-4">{footer}</CardFooter>}
+    {footer && (
+      <CardFooter className="pt-4" data-testid="view-card-footer">
+        {footer}
+      </CardFooter>
+    )}
   </Card>
 );
