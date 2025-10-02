@@ -10,7 +10,7 @@ import type {
 } from "@/components/ui/card";
 import type React from "react";
 
-import { ViewCard } from "@/components/Sections/About/card";
+import { ViewCard } from "@/components/Common/card";
 
 vi.mock("@/components/ui/card", () => ({
   Card: (props: React.ComponentProps<typeof Card>) => <div {...props} />,

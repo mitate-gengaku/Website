@@ -9,6 +9,7 @@ import {
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { About } from "@/components/Sections/About";
+import { Blog } from "@/components/Sections/Blog";
 
 const zennCollections: CollectionEntry<keyof AnyEntryMap>[] =
   await getCollection("zenn");
@@ -26,6 +27,7 @@ const articles = zennCollections.slice(0, 6);
   <body>
     <Header />
     <About />
+    <Blog articles={articles} />
     <Footer />
   </body>
 </html>
