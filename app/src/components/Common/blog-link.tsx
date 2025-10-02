@@ -7,7 +7,12 @@ type Props = React.ComponentProps<"a"> & {
   size?: React.ComponentProps<typeof Button>["size"];
 };
 
-export const BlogLink = ({ className, children, size = "sm", ...props }: Props) => (
+export const BlogLink = ({
+  className,
+  children,
+  size = "sm",
+  ...props
+}: Props) => (
   <a
     className={cn(
       buttonVariants({ size: size }),
