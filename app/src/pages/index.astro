@@ -1,8 +1,19 @@
 ---
 import "../styles/global.css";
+import {
+  type CollectionEntry,
+  type AnyEntryMap,
+  getCollection,
+} from "astro:content";
+
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { About } from "@/components/Sections/About";
+import { Blog } from "@/components/Sections/Blog";
+
+const zennCollections: CollectionEntry<keyof AnyEntryMap>[] =
+  await getCollection("zenn");
+const articles = zennCollections.slice(0, 6);
 ---
 
 <html lang="ja">
@@ -16,6 +27,7 @@ import { About } from "@/components/Sections/About";
   <body>
     <Header />
     <About />
+    <Blog articles={articles} />
     <Footer />
   </body>
 </html>

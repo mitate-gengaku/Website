@@ -34,7 +34,9 @@ export const ViewCard = ({
       <CardTitle className={"flex items-center gap-2"}>{title}</CardTitle>
       {description && <CardDescription>{description}</CardDescription>}
     </CardHeader>
-    <CardContent className={contentClass}>{content}</CardContent>
+    <CardContent className={contentClass} data-testid="view-card-content">
+      {content}
+    </CardContent>
     {footer && (
       <CardFooter className="pt-4" data-testid="view-card-footer">
         {footer}

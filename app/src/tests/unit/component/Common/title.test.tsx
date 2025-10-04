@@ -1,6 +1,8 @@
 import { cleanup, render, type RenderResult } from "@testing-library/react";
 
-import { Title } from "@/components/Common/title";
+vi.doUnmock("@/components/Common/title");
+
+const { Title } = await import("@/components/Common/title");
 
 describe("Title(Common)コンポーネント", () => {
   let rendered: RenderResult;

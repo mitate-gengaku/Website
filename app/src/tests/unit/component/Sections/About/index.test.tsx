@@ -4,14 +4,6 @@ import type React from "react";
 
 import { About } from "@/components/Sections/About";
 
-vi.mock("@/components/Common/section", () => ({
-  Section: (props: React.ComponentProps<"section">) => <section {...props} />,
-}));
-
-vi.mock("@/components/Common/title", () => ({
-  Title: () => <div data-testid="title" />,
-}));
-
 vi.mock("@/components/Common/description", () => ({
   Description: () => <div data-testid="description" />,
 }));

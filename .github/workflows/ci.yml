@@ -62,17 +62,3 @@ jobs:
         uses: davelosert/vitest-coverage-report-action@v2
         with:
           working-directory: "./app"
-
-  release:
-    name: Release
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    permissions:
-      pull-requests: write
-    steps:
-      - uses: release-drafter/release-drafter@v6
-        with:
-          config-name: ./release/release-drafter.yml
-          publish: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
