@@ -1,9 +1,9 @@
+// 一時的にモックを解除する
+vi.unmock("@/utils/cn");
+
 import { cleanup } from "@testing-library/react";
 
-// 一時的にモックを解除する
-vi.doUnmock("@/utils/cn");
-
-const { cn } = await import("@/utils/cn");
+import { cn } from "@/utils/cn";
 
 describe("cn汎用関数", () => {
   afterEach(cleanup);

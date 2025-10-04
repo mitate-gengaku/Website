@@ -18,3 +18,11 @@ vi.mock("@/components/ui/button", () => ({
       return `btn btn-${variant} btn-${size} ${className || ""}`.trim();
     }),
 }));
+
+vi.mock("@/components/Common/section", () => ({
+  Section: (props: React.ComponentProps<"section">) => <section {...props} />,
+}));
+
+vi.mock("@/components/Common/title", () => ({
+  Title: ({ title, ...props }: React.ComponentProps<"h2"> & { title: string }) => <div data-testid="title" {...props}>{title}</div>,
+}));

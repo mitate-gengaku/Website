@@ -2,6 +2,8 @@ import { cleanup, render, type RenderResult } from "@testing-library/react";
 
 import { Section } from "@/components/Common/section";
 
+vi.unmock("@/components/Common/section")
+
 describe("Sectionコンポーネント", () => {
   let rendered: RenderResult;
 

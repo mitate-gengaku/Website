@@ -10,7 +10,7 @@ type Props = {
 };
 
 export const Blog = ({ articles }: Props) => (
-  <Section id="blog">
+  <Section id="blog" data-testid="blog">
     <div className="mx-auto gap-y-8 max-w-5xl flex flex-col">
       <Title title="Blog" className="text-center lg:text-left" />
       <Cards articles={articles} />
