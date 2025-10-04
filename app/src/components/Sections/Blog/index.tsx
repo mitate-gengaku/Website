@@ -5,7 +5,6 @@ import { Section } from "@/components/Common/section";
 import { Title } from "@/components/Common/title";
 import { Cards } from "@/components/Sections/Blog/cards";
 
-
 type Props = {
   articles: CollectionEntry<keyof AnyEntryMap>[];
 };

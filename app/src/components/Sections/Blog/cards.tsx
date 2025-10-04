@@ -19,7 +19,7 @@ export const Cards = ({ articles }: Props) => (
         title={
           <>
             <ZennIcon fill="#3EA8FF" className="size-4" />
-            Zenn
+            <span>Zenn</span>
           </>
         }
         content={
