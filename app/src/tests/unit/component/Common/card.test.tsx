@@ -1,35 +1,8 @@
 import { cleanup, render, type RenderResult } from "@testing-library/react";
 
-import type {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import type React from "react";
 
 import { ViewCard } from "@/components/Common/card";
-
-vi.mock("@/components/ui/card", () => ({
-  Card: (props: React.ComponentProps<typeof Card>) => <div {...props} />,
-  CardContent: (props: React.ComponentProps<typeof CardContent>) => (
-    <div {...props} />
-  ),
-  CardDescription: (props: React.ComponentProps<typeof CardDescription>) => (
-    <div {...props} />
-  ),
-  CardFooter: (props: React.ComponentProps<typeof CardFooter>) => (
-    <div {...props} />
-  ),
-  CardHeader: (props: React.ComponentProps<typeof CardHeader>) => (
-    <div {...props} />
-  ),
-  CardTitle: (props: React.ComponentProps<typeof CardTitle>) => (
-    <div {...props} />
-  ),
-}));
 
 describe("ViewCardコンポーネントのテスト", () => {
   let rendered: RenderResult;

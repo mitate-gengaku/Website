@@ -25,7 +25,7 @@ export const ViewCard = ({
 }: Props) => (
   <Card
     className="hover:shadow-lg transition-all rounded-sm"
-    data-testid="view-card"
+    data-testid={`view-card`}
   >
     <CardHeader
       className={cn("border-b border-gray-200", !description && "gap-0")}

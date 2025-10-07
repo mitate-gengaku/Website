@@ -13,7 +13,7 @@ type Props = {
 };
 
 export const Cards = ({ articles }: Props) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8" data-testid="cards">
     {articles.map(({ data: { id, title, url, published } }) => (
       <ViewCard
         title={
@@ -29,7 +29,7 @@ export const Cards = ({ articles }: Props) => (
             </h3>
             <Button variant={"outline"} size={"sm"} asChild>
               <a
-                href={url ?? "https://zenn.dev/mitate_gengaku"}
+                href={url === null ? "https://zenn.dev/mitate_gengaku" : url}
                 className="flex items-center gap-2"
               >
                 <ExternalLinkIcon />
