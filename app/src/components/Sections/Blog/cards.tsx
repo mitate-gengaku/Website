@@ -23,8 +23,8 @@ export const Cards = ({ articles }: Props) => (
           </>
         }
         content={
-          <div className="space-y-8">
-            <h3 className="scroll-m-20 text-xl font-semibold tracking-tight">
+          <div className="flex flex-col gap-y-8">
+            <h3 className="min-h-14 scroll-m-20 text-xl font-semibold tracking-tight">
               {title}
             </h3>
             <Button variant={"outline"} size={"sm"} asChild>
