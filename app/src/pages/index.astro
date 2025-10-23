@@ -10,6 +10,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { About } from "@/components/Sections/About";
 import { Blog } from "@/components/Sections/Blog";
+import { Projects } from "@/components/Sections/Projects";
 
 const zennCollections: CollectionEntry<keyof AnyEntryMap>[] =
   await getCollection("zenn");
@@ -23,10 +24,25 @@ const articles = zennCollections.slice(0, 6);
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
+    <!-- 
+ __       __  __    __                  __                       ______                                           __                  
+/  \     /  |/  |  /  |                /  |                     /      \                                         /  |                
+$$  \   /$$ |$$/  _$$ |_     ______   _$$ |_     ______        /$$$$$$  |  ______   _______    ______    ______  $$ |   __  __    __ 
+$$$  \ /$$$ |/  |/ $$   |   /      \ / $$   |   /      \       $$ | _$$/  /      \ /       \  /      \  /      \ $$ |  /  |/  |  /  |
+$$$$  /$$$$ |$$ |$$$$$$/    $$$$$$  |$$$$$$/   /$$$$$$  |      $$ |/    |/$$$$$$  |$$$$$$$  |/$$$$$$  | $$$$$$  |$$ |_/$$/ $$ |  $$ |
+$$ $$ $$/$$ |$$ |  $$ | __  /    $$ |  $$ | __ $$    $$ |      $$ |$$$$ |$$    $$ |$$ |  $$ |$$ |  $$ | /    $$ |$$   $$<  $$ |  $$ |
+$$ |$$$/ $$ |$$ |  $$ |/  |/$$$$$$$ |  $$ |/  |$$$$$$$$/       $$ \__$$ |$$$$$$$$/ $$ |  $$ |$$ \__$$ |/$$$$$$$ |$$$$$$  \ $$ \__$$ |
+$$ | $/  $$ |$$ |  $$  $$/ $$    $$ |  $$  $$/ $$       |      $$    $$/ $$       |$$ |  $$ |$$    $$ |$$    $$ |$$ | $$  |$$    $$/ 
+$$/      $$/ $$/    $$$$/   $$$$$$$/    $$$$/   $$$$$$$/        $$$$$$/   $$$$$$$/ $$/   $$/  $$$$$$$ | $$$$$$$/ $$/   $$/  $$$$$$/  
+                                                                                             /  \__$$ |                              
+                                                                                             $$    $$/                               
+                                                                                              $$$$$$/                                
+-->
   </head>
   <body>
     <Header />
     <About />
+    <Projects />
     <Blog articles={articles} />
     <Footer />
   </body>
