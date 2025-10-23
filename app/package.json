@@ -14,7 +14,8 @@
     "test:w": "vitest run --watch --coverage.enabled true",
     "e2e": "npx playwright test",
     "report": "npx playwright show-report",
-    "add": "npx shadcn@latest add"
+    "add": "npx shadcn@latest add",
+    "schema": "npx microcms-typescript src/schema src/types/project.ts"
   },
   "dependencies": {
     "@ascorbic/feed-loader": "^2.0.1",
